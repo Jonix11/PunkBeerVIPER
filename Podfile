@@ -10,5 +10,6 @@ target 'PunkBeerVIPER' do
   pod 'SDWebImage'
   pod 'SnapKit'
   pod 'PromiseKit'
+  pod 'ObjectMapper'
 
 end

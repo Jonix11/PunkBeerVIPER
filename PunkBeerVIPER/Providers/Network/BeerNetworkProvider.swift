@@ -23,13 +23,14 @@ class BeerNetworkProvider: BeerProviderContract {
                 case .failure(let error):
                     promise.reject(error)
                 case .success(let value):
-                    do {
-                        let decoder = JSONDecoder()
-                        let beerList = try decoder.decode([Beer].self, from: value)
-                        promise.fulfill(beerList)
-                    } catch {
-                        promise.reject(error)
-                    }
+                    
+//                    do {
+//                        let decoder = JSONDecoder()
+//                        let beerList = try decoder.decode([Beer].self, from: value)
+//                        promise.fulfill(beerList)
+//                    } catch {
+//                        promise.reject(error)
+//                    }
                 }
             }
         }
