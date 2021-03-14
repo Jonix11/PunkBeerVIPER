@@ -19,9 +19,12 @@
 		AC0F5B7925FE211400EB18E2 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */; };
 		AC0F5B8225FE225700EB18E2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8125FE225700EB18E2 /* Beer.swift */; };
 		AC0F5B8625FE22D300EB18E2 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */; };
+		BD1F401D6D4E852284D8DC62 /* Pods_PunkBeerVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16113AF5E35CDB284B45FEF3 /* Pods-PunkBeerVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PunkBeerVIPER.debug.xcconfig"; path = "Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		9C01A0B468CFAE57176E6CB4 /* Pods-PunkBeerVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PunkBeerVIPER.release.xcconfig"; path = "Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		AC0F5B3C25FE1DE800EB18E2 /* PunkBeerVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunkBeerVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0F5B3F25FE1DE800EB18E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0F5B4125FE1DE800EB18E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		AC0F5B8125FE225700EB18E2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PunkBeerVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1F401D6D4E852284D8DC62 /* Pods_PunkBeerVIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49376A6AA9DA86C28110E482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FC497AD5F1BCCF146F5C7DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16113AF5E35CDB284B45FEF3 /* Pods-PunkBeerVIPER.debug.xcconfig */,
+				9C01A0B468CFAE57176E6CB4 /* Pods-PunkBeerVIPER.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AC0F5B3325FE1DE800EB18E2 = {
 			isa = PBXGroup;
 			children = (
 				AC0F5B3E25FE1DE800EB18E2 /* PunkBeerVIPER */,
 				AC0F5B3D25FE1DE800EB18E2 /* Products */,
+				4FC497AD5F1BCCF146F5C7DC /* Pods */,
+				49376A6AA9DA86C28110E482 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC0F5B5025FE1DE900EB18E2 /* Build configuration list for PBXNativeTarget "PunkBeerVIPER" */;
 			buildPhases = (
+				3E11C6E225FB3BEE3D1112E6 /* [CP] Check Pods Manifest.lock */,
 				AC0F5B3825FE1DE800EB18E2 /* Sources */,
 				AC0F5B3925FE1DE800EB18E2 /* Frameworks */,
 				AC0F5B3A25FE1DE800EB18E2 /* Resources */,
+				071C07CB39D4739C0285F8EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		071C07CB39D4739C0285F8EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E11C6E225FB3BEE3D1112E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PunkBeerVIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC0F5B3825FE1DE800EB18E2 /* Sources */ = {
@@ -331,6 +400,7 @@
 		};
 		AC0F5B5125FE1DE900EB18E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16113AF5E35CDB284B45FEF3 /* Pods-PunkBeerVIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +420,7 @@
 		};
 		AC0F5B5225FE1DE900EB18E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C01A0B468CFAE57176E6CB4 /* Pods-PunkBeerVIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

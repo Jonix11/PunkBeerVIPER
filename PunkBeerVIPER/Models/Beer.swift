@@ -60,6 +60,5 @@ extension Beer: Decodable {
         imageURL = try container.decodeIfPresent(URL.self, forKey: .imageURL)
         abv = try container.decodeIfPresent(Double.self, forKey: .abv)
         foodPairing = try container.decodeIfPresent([String].self, forKey: .foodPairing)
-        
     }
 }
