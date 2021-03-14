@@ -116,10 +116,10 @@
 		AC0F5B3E25FE1DE800EB18E2 /* PunkBeerVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				AC0F5B8D25FE246900EB18E2 /* Providers */,
 				AC0F5B8425FE22B100EB18E2 /* Extensions */,
 				AC0F5B8025FE224200EB18E2 /* Models */,
 				AC0F5B5525FE1FE100EB18E2 /* Modules */,
+				AC0F5B8D25FE246900EB18E2 /* Providers */,
 				AC0F5B3F25FE1DE800EB18E2 /* AppDelegate.swift */,
 				AC0F5B4125FE1DE800EB18E2 /* SceneDelegate.swift */,
 				AC0F5B4325FE1DE800EB18E2 /* ViewController.swift */,

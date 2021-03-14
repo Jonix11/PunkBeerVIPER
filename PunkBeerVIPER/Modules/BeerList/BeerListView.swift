@@ -20,6 +20,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
     var datasource: BeerListDataSource!
     // swiftlint:disable:next weak_delegate
     var delegate: BeerListDelegate!
+    var searchDelegate: BeerSearchBarDelegate!
     
 	// MARK: - LifeCycle
     override func viewDidLoad() {
@@ -39,9 +40,12 @@ class BeerListView: BaseViewController, BeerListViewContract {
                            forCellReuseIdentifier: BeerListTableViewCell.reusableId)
         datasource = BeerListDataSource()
         delegate = BeerListDelegate()
+        searchDelegate = BeerSearchBarDelegate()
+        searchDelegate.presenter = presenter
         
         tableView.dataSource = datasource
         tableView.delegate = delegate
+        searchBar.delegate = searchDelegate
     }
     
     // MARK: - Public methods
@@ -73,5 +77,18 @@ class BeerListDataSource: NSObject, UITableViewDataSource {
 class BeerListDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+}
+
+class BeerSearchBarDelegate: NSObject, UISearchBarDelegate {
+    
+    weak var presenter: BeerListPresenterContract!
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            presenter.getInitialBeerList()
+        } else {
+            presenter.getSearchedBeerList(withPairingFood: searchText)
+        }
     }
 }

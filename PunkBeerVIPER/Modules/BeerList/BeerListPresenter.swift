@@ -23,11 +23,24 @@ class BeerListPresenter: BasePresenter, BeerListPresenterContract {
     }
 
     func viewWillAppear() {
+        self.getInitialBeerList()
+    }
+    
+    func getInitialBeerList() {
         interactor.getInitialBeerList(onsuccess: { [weak self] (beers) in
             self?.beerList = beers
             self?.view.updateBeerListData(with: beers)
         }, failure: { (error) in
-            
+            #warning("TODO")
+        })
+    }
+    
+    func getSearchedBeerList(withPairingFood food: String) {
+        interactor.getSearchedBeerList(withPairingFood: food, success: { [weak self] (beers) in
+            self?.beerList = beers
+            self?.view.updateBeerListData(with: beers)
+        }, failure: { [weak self] (error) in
+            #warning("TODO")
         })
     }
 }

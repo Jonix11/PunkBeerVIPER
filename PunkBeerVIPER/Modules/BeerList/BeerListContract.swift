@@ -29,12 +29,15 @@ protocol BeerListPresenterContract: BasePresenter {
 
     func viewDidLoad()
     func viewWillAppear()
+    func getInitialBeerList()
+    func getSearchedBeerList(withPairingFood food: String)
 }
 
 protocol BeerListInteractorContract: BaseInteractor {
     var output: BeerListInteractorOutputContract! {get set}
     
     func getInitialBeerList(onsuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void)
+    func getSearchedBeerList(withPairingFood food: String, success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void)
 }
 
 protocol BeerListInteractorOutputContract: class {

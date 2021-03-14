@@ -29,4 +29,14 @@ class BeerListInteractor: BaseInteractor, BeerListInteractorContract {
             failure(error)
         })
     }
+    
+    func getSearchedBeerList(withPairingFood food: String, success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void) {
+        networkProvider.getSearchedBeers(withPairingFood: food, success: { (beers) in
+            assert(Thread.current == Thread.main)
+            success(beers)
+        }, failure: { (error) in
+            assert(Thread.current == Thread.main)
+            failure(error)
+        })
+    }
 }

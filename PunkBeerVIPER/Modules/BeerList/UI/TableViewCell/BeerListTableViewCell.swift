@@ -54,4 +54,9 @@ class BeerListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        beerImage.sd_cancelCurrentImageLoad()
+    }
+    
 }
