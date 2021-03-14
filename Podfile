@@ -7,5 +7,6 @@ target 'PunkBeerVIPER' do
 
   # Pods for PunkBeerVIPER
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end

@@ -21,6 +21,16 @@
 		AC0F5B8625FE22D300EB18E2 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */; };
 		AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */; };
 		AC0F5B9425FE25B100EB18E2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */; };
+		AC0F5B9F25FE27AA00EB18E2 /* BeerListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9725FE27AA00EB18E2 /* BeerListContract.swift */; };
+		AC0F5BA025FE27AA00EB18E2 /* BeerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9825FE27AA00EB18E2 /* BeerListPresenter.swift */; };
+		AC0F5BA125FE27AA00EB18E2 /* BeerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9925FE27AA00EB18E2 /* BeerListBuilder.swift */; };
+		AC0F5BA225FE27AA00EB18E2 /* BeerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9A25FE27AA00EB18E2 /* BeerListInteractor.swift */; };
+		AC0F5BA325FE27AA00EB18E2 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9B25FE27AA00EB18E2 /* BeerListView.swift */; };
+		AC0F5BA425FE27AA00EB18E2 /* BeerListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0F5B9C25FE27AA00EB18E2 /* BeerListView.xib */; };
+		AC0F5BA525FE27AA00EB18E2 /* BeerListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9D25FE27AA00EB18E2 /* BeerListEntity.swift */; };
+		AC0F5BA625FE27AA00EB18E2 /* BeerListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9E25FE27AA00EB18E2 /* BeerListWireframe.swift */; };
+		AC0F5BAC25FE294300EB18E2 /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5BAA25FE294300EB18E2 /* BeerListTableViewCell.swift */; };
+		AC0F5BAD25FE294300EB18E2 /* BeerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0F5BAB25FE294300EB18E2 /* BeerListTableViewCell.xib */; };
 		BD1F401D6D4E852284D8DC62 /* Pods_PunkBeerVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +53,16 @@
 		AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerNetworkProvider.swift; sourceTree = "<group>"; };
 		AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		AC0F5B9725FE27AA00EB18E2 /* BeerListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListContract.swift; sourceTree = "<group>"; };
+		AC0F5B9825FE27AA00EB18E2 /* BeerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListPresenter.swift; sourceTree = "<group>"; };
+		AC0F5B9925FE27AA00EB18E2 /* BeerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListBuilder.swift; sourceTree = "<group>"; };
+		AC0F5B9A25FE27AA00EB18E2 /* BeerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListInteractor.swift; sourceTree = "<group>"; };
+		AC0F5B9B25FE27AA00EB18E2 /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
+		AC0F5B9C25FE27AA00EB18E2 /* BeerListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListView.xib; sourceTree = "<group>"; };
+		AC0F5B9D25FE27AA00EB18E2 /* BeerListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListEntity.swift; sourceTree = "<group>"; };
+		AC0F5B9E25FE27AA00EB18E2 /* BeerListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListWireframe.swift; sourceTree = "<group>"; };
+		AC0F5BAA25FE294300EB18E2 /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
+		AC0F5BAB25FE294300EB18E2 /* BeerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerListTableViewCell.xib; sourceTree = "<group>"; };
 		E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PunkBeerVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +133,7 @@
 		AC0F5B5525FE1FE100EB18E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC0F5B9625FE278100EB18E2 /* BeerList */,
 				AC0F5B6B25FE208900EB18E2 /* BASE */,
 			);
 			path = Modules;
@@ -163,6 +184,39 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		AC0F5B9625FE278100EB18E2 /* BeerList */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F5BA825FE28FA00EB18E2 /* UI */,
+				AC0F5B9725FE27AA00EB18E2 /* BeerListContract.swift */,
+				AC0F5B9825FE27AA00EB18E2 /* BeerListPresenter.swift */,
+				AC0F5B9925FE27AA00EB18E2 /* BeerListBuilder.swift */,
+				AC0F5B9A25FE27AA00EB18E2 /* BeerListInteractor.swift */,
+				AC0F5B9B25FE27AA00EB18E2 /* BeerListView.swift */,
+				AC0F5B9D25FE27AA00EB18E2 /* BeerListEntity.swift */,
+				AC0F5B9E25FE27AA00EB18E2 /* BeerListWireframe.swift */,
+			);
+			path = BeerList;
+			sourceTree = "<group>";
+		};
+		AC0F5BA825FE28FA00EB18E2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F5BA925FE291500EB18E2 /* TableViewCell */,
+				AC0F5B9C25FE27AA00EB18E2 /* BeerListView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AC0F5BA925FE291500EB18E2 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F5BAA25FE294300EB18E2 /* BeerListTableViewCell.swift */,
+				AC0F5BAB25FE294300EB18E2 /* BeerListTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +229,7 @@
 				AC0F5B3925FE1DE800EB18E2 /* Frameworks */,
 				AC0F5B3A25FE1DE800EB18E2 /* Resources */,
 				071C07CB39D4739C0285F8EC /* [CP] Embed Pods Frameworks */,
+				AC0F5BB125FE2AD900EB18E2 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -223,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0F5B4C25FE1DE900EB18E2 /* LaunchScreen.storyboard in Resources */,
+				AC0F5BA425FE27AA00EB18E2 /* BeerListView.xib in Resources */,
 				AC0F5B4925FE1DE900EB18E2 /* Assets.xcassets in Resources */,
+				AC0F5BAD25FE294300EB18E2 /* BeerListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +326,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AC0F5BB125FE2AD900EB18E2 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -279,12 +354,20 @@
 				AC0F5B9425FE25B100EB18E2 /* NetworkConstants.swift in Sources */,
 				AC0F5B4425FE1DE800EB18E2 /* ViewController.swift in Sources */,
 				AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */,
+				AC0F5B9F25FE27AA00EB18E2 /* BeerListContract.swift in Sources */,
 				AC0F5B8225FE225700EB18E2 /* Beer.swift in Sources */,
+				AC0F5BA325FE27AA00EB18E2 /* BeerListView.swift in Sources */,
+				AC0F5BA125FE27AA00EB18E2 /* BeerListBuilder.swift in Sources */,
 				AC0F5B7625FE20EF00EB18E2 /* BaseEntity.swift in Sources */,
 				AC0F5B6D25FE20C300EB18E2 /* BaseViewController.swift in Sources */,
+				AC0F5BA225FE27AA00EB18E2 /* BeerListInteractor.swift in Sources */,
 				AC0F5B7925FE211400EB18E2 /* BaseWireframe.swift in Sources */,
+				AC0F5BAC25FE294300EB18E2 /* BeerListTableViewCell.swift in Sources */,
+				AC0F5BA625FE27AA00EB18E2 /* BeerListWireframe.swift in Sources */,
+				AC0F5BA025FE27AA00EB18E2 /* BeerListPresenter.swift in Sources */,
 				AC0F5B7025FE20D300EB18E2 /* BaseInteractor.swift in Sources */,
 				AC0F5B4025FE1DE800EB18E2 /* AppDelegate.swift in Sources */,
+				AC0F5BA525FE27AA00EB18E2 /* BeerListEntity.swift in Sources */,
 				AC0F5B4225FE1DE800EB18E2 /* SceneDelegate.swift in Sources */,
 				AC0F5B7325FE20E600EB18E2 /* BasePresenter.swift in Sources */,
 				AC0F5B8625FE22D300EB18E2 /* DateFormatterExtension.swift in Sources */,

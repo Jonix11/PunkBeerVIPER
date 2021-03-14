@@ -17,7 +17,15 @@ struct Beer {
     let abv: Double?
     let foodPairing: [String]?
     
-    init(beerId: Int, name: String, tagline: String? = nil, firstBrewed: Date? = nil, description: String? = nil, imageURL: URL? = nil, abv: Double? = nil, foodPairing: [String]? = nil) {
+    init(beerId: Int,
+         name: String,
+         tagline: String? = nil,
+         firstBrewed: Date? = nil,
+         description: String? = nil,
+         imageURL: URL? = nil,
+         abv: Double? = nil,
+         foodPairing: [String]? = nil) {
+        
         self.beerId = beerId
         self.name = name
         self.tagline = tagline
