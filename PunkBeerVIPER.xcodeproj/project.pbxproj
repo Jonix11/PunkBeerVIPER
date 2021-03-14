@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		AC0F5B7925FE211400EB18E2 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */; };
 		AC0F5B8225FE225700EB18E2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8125FE225700EB18E2 /* Beer.swift */; };
 		AC0F5B8625FE22D300EB18E2 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */; };
+		AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */; };
+		AC0F5B9425FE25B100EB18E2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */; };
 		BD1F401D6D4E852284D8DC62 /* Pods_PunkBeerVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		AC0F5B8125FE225700EB18E2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerNetworkProvider.swift; sourceTree = "<group>"; };
+		AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PunkBeerVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,7 +72,6 @@
 				16113AF5E35CDB284B45FEF3 /* Pods-PunkBeerVIPER.debug.xcconfig */,
 				9C01A0B468CFAE57176E6CB4 /* Pods-PunkBeerVIPER.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,6 +96,7 @@
 		AC0F5B3E25FE1DE800EB18E2 /* PunkBeerVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				AC0F5B8D25FE246900EB18E2 /* Providers */,
 				AC0F5B8425FE22B100EB18E2 /* Extensions */,
 				AC0F5B8025FE224200EB18E2 /* Models */,
 				AC0F5B5525FE1FE100EB18E2 /* Modules */,
@@ -140,6 +144,23 @@
 				AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC0F5B8D25FE246900EB18E2 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F5B8E25FE247200EB18E2 /* Network */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		AC0F5B8E25FE247200EB18E2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */,
+				AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0F5B9425FE25B100EB18E2 /* NetworkConstants.swift in Sources */,
 				AC0F5B4425FE1DE800EB18E2 /* ViewController.swift in Sources */,
+				AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */,
 				AC0F5B8225FE225700EB18E2 /* Beer.swift in Sources */,
 				AC0F5B7625FE20EF00EB18E2 /* BaseEntity.swift in Sources */,
 				AC0F5B6D25FE20C300EB18E2 /* BaseViewController.swift in Sources */,
