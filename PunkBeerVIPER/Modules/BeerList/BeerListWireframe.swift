@@ -11,9 +11,12 @@ import Foundation
 import UIKit
 
 class BeerListWireframe: BaseWireframe, BeerListWireframeContract {
+    
     weak var output: BeerListWireframeOutputContract!
     weak var view: UIViewController!
 
-    
-    
+    func showBeerDetailView(withBeer beer: Beer) {
+        let detailView = BeerDetailBuilder.build(withBeer: beer)
+        view.present(detailView, animated: true, completion: nil)
+    }
 }

@@ -30,7 +30,7 @@ class BeerListPresenter: BasePresenter, BeerListPresenterContract {
         interactor.getInitialBeerList(onsuccess: { [weak self] (beers) in
             self?.beerList = beers
             self?.view.updateBeerListData(with: beers)
-        }, failure: { (error) in
+        }, failure: { [weak self] (error) in
             #warning("TODO")
         })
     }
@@ -42,6 +42,11 @@ class BeerListPresenter: BasePresenter, BeerListPresenterContract {
         }, failure: { [weak self] (error) in
             #warning("TODO")
         })
+    }
+    
+    func beerSelected(in index: Int) {
+        let beer = beerList[index]
+        wireframe.showBeerDetailView(withBeer: beer)
     }
 }
 

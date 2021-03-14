@@ -20,6 +20,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
     var datasource: BeerListDataSource!
     // swiftlint:disable:next weak_delegate
     var delegate: BeerListDelegate!
+    // swiftlint:disable:next weak_delegate
     var searchDelegate: BeerSearchBarDelegate!
     
 	// MARK: - LifeCycle
@@ -40,6 +41,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
                            forCellReuseIdentifier: BeerListTableViewCell.reusableId)
         datasource = BeerListDataSource()
         delegate = BeerListDelegate()
+        delegate.presenter = presenter
         searchDelegate = BeerSearchBarDelegate()
         searchDelegate.presenter = presenter
         
@@ -75,8 +77,15 @@ class BeerListDataSource: NSObject, UITableViewDataSource {
 }
 
 class BeerListDelegate: NSObject, UITableViewDelegate {
+    
+    weak var presenter: BeerListPresenterContract!
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.beerSelected(in: indexPath.row)
     }
 }
 
