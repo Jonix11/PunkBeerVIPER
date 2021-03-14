@@ -9,5 +9,6 @@ target 'PunkBeerVIPER' do
   pod 'Alamofire'
   pod 'SDWebImage'
   pod 'SnapKit'
+  pod 'PromiseKit'
 
 end

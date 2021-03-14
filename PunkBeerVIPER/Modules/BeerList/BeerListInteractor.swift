@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 class BeerListInteractor: BaseInteractor, BeerListInteractorContract {
     
@@ -20,26 +21,23 @@ class BeerListInteractor: BaseInteractor, BeerListInteractorContract {
     }
     
     // MARK: - Public methods
-    func getInitialBeerList(onsuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void) {
-        networkProvider.getInitialBeers(onSuccess: { (beers) in
-            assert(Thread.current == Thread.main)
-            success(beers)
-        }, failure: { (error) in
-            assert(Thread.current == Thread.main)
-            failure(error)
-        })
+    func getInitialBeerList() -> Promise<[Beer]> {
+        return Promise<[Beer]> { promise in
+            firstly {
+                self.networkProvider.getInitialBeers()
+            }.done { beerList in
+                promise.fulfill(beerList)
+            }
+        }
     }
     
-    func getSearchedBeerList(withPairingFood food: String,
-                             success: @escaping ([Beer]) -> Void,
-                             failure: @escaping (Error) -> Void) {
-        
-        networkProvider.getSearchedBeers(withPairingFood: food, success: { (beers) in
-            assert(Thread.current == Thread.main)
-            success(beers)
-        }, failure: { (error) in
-            assert(Thread.current == Thread.main)
-            failure(error)
-        })
+    func getSearchedBeerList(withPairingFood food: String) -> Promise<[Beer]> {
+        return Promise<[Beer]> { promise in
+            firstly {
+                self.networkProvider.getSearchedBeers(withPairingFood: food)
+            }.done { beerList in
+                promise.fulfill(beerList)
+            }
+        }
     }
 }

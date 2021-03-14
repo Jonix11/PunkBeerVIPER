@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import PromiseKit
 
 protocol BeerListEntityContract: BaseEntity {
     
@@ -37,10 +38,8 @@ protocol BeerListPresenterContract: BasePresenter {
 protocol BeerListInteractorContract: BaseInteractor {
     var output: BeerListInteractorOutputContract! {get set}
     
-    func getInitialBeerList(onsuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void)
-    func getSearchedBeerList(withPairingFood food: String,
-                             success: @escaping ([Beer]) -> Void,
-                             failure: @escaping (Error) -> Void)
+    func getInitialBeerList() -> Promise<[Beer]>
+    func getSearchedBeerList(withPairingFood food: String) -> Promise<[Beer]>
 }
 
 protocol BeerListInteractorOutputContract: class {

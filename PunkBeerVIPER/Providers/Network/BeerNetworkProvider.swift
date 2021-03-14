@@ -7,43 +7,48 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 protocol BeerProviderContract {
-    func getInitialBeers(onSuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void)
-    func getSearchedBeers(withPairingFood food: String, success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void)
+    func getInitialBeers() -> Promise<[Beer]>
+    func getSearchedBeers(withPairingFood food: String) -> Promise<[Beer]>
 }
 
 class BeerNetworkProvider: BeerProviderContract {
     
-    func getInitialBeers(onSuccess success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void) {
-        AF.request(PunkAPIConstants.getAbsoluteURL()).responseData { response in
-            switch response.result {
-            case .failure(let error):
-                failure(error)
-            case .success(let value):
-                do {
-                    let decoder = JSONDecoder()
-                    let beerList = try decoder.decode([Beer].self, from: value)
-                    success(beerList)
-                } catch {
-                    failure(error)
+    func getInitialBeers() -> Promise<[Beer]> {
+        return Promise<[Beer]> { promise in
+            AF.request(PunkAPIConstants.getAbsoluteURL()).responseData { response in
+                switch response.result {
+                case .failure(let error):
+                    promise.reject(error)
+                case .success(let value):
+                    do {
+                        let decoder = JSONDecoder()
+                        let beerList = try decoder.decode([Beer].self, from: value)
+                        promise.fulfill(beerList)
+                    } catch {
+                        promise.reject(error)
+                    }
                 }
             }
         }
     }
     
-    func getSearchedBeers(withPairingFood food: String, success: @escaping ([Beer]) -> Void, failure: @escaping (Error) -> Void) {
-        AF.request(PunkAPIConstants.getBeersURL(withPairingFood: food)).responseData { response in
-            switch response.result {
-            case .failure(let error):
-                failure(error)
-            case .success(let value):
-                do {
-                    let decoder = JSONDecoder()
-                    let beerList = try decoder.decode([Beer].self, from: value)
-                    success(beerList)
-                } catch {
-                    failure(error)
+    func getSearchedBeers(withPairingFood food: String) -> Promise<[Beer]> {
+        return Promise<[Beer]> { promise in
+            AF.request(PunkAPIConstants.getBeersURL(withPairingFood: food)).responseData { response in
+                switch response.result {
+                case .failure(let error):
+                    promise.reject(error)
+                case .success(let value):
+                    do {
+                        let decoder = JSONDecoder()
+                        let beerList = try decoder.decode([Beer].self, from: value)
+                        promise.fulfill(beerList)
+                    } catch {
+                        promise.reject(error)
+                    }
                 }
             }
         }

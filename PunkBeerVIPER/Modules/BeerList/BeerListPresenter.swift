@@ -8,8 +8,9 @@
 //
 
 import Foundation
+import PromiseKit
 
-class BeerListPresenter: BasePresenter, BeerListPresenterContract {
+class BeerListPresenter: BasePresenter, BeerListPresenterContract {    
 
     weak var view: BeerListViewContract!
     var interactor: BeerListInteractorContract!
@@ -27,21 +28,25 @@ class BeerListPresenter: BasePresenter, BeerListPresenterContract {
     }
     
     func getInitialBeerList() {
-        interactor.getInitialBeerList(onsuccess: { [weak self] (beers) in
-            self?.beerList = beers
-            self?.view.updateBeerListData(with: beers)
-        }, failure: { [weak self] (error) in
+        firstly {
+            interactor.getInitialBeerList()
+        }.done { [weak self] beerList in
+            self?.beerList = beerList
+            self?.view.updateBeerListData(with: beerList)
+        }.catch { [weak self] error in
             #warning("TODO")
-        })
+        }
     }
     
     func getSearchedBeerList(withPairingFood food: String) {
-        interactor.getSearchedBeerList(withPairingFood: food, success: { [weak self] (beers) in
-            self?.beerList = beers
-            self?.view.updateBeerListData(with: beers)
-        }, failure: { [weak self] (error) in
+        firstly {
+            interactor.getSearchedBeerList(withPairingFood: food)
+        }.done { [weak self] beerList in
+            self?.beerList = beerList
+            self?.view.updateBeerListData(with: beerList)
+        }.catch { [weak self] error in
             #warning("TODO")
-        })
+        }
     }
     
     func beerSelected(in index: Int) {
