@@ -14,6 +14,7 @@ class BeerDetailView: BaseViewController, BeerDetailViewContract {
 
 	var presenter: BeerDetailPresenterContract!
     var datasource: FoodTableViewDatasource!
+    // swiftlint:disable:next weak_delegate
     var delegate: FoodTableViewDelegate!
     
     // MARK: - Outlets
