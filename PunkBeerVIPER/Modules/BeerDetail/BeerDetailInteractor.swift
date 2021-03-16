@@ -13,14 +13,14 @@ class BeerDetailInteractor: BaseInteractor, BeerDetailInteractorContract {
     weak var output: BeerDetailInteractorOutputContract!
 
     var networkProvider: BeerProviderContract
-    var beer: Beer
+    var beer: BeerPresentable
     
-    init (provider: BeerProviderContract, beer: Beer) {
+    init (provider: BeerProviderContract, beer: BeerPresentable) {
         self.networkProvider = provider
         self.beer = beer
     }
     
-    func getBeerData() -> Beer {
+    func getBeerData() -> BeerPresentable {
         return beer
     }
 }

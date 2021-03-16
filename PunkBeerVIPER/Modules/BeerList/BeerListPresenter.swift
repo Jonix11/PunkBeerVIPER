@@ -17,7 +17,7 @@ class BeerListPresenter: BasePresenter, BeerListPresenterContract {
     var entity: BeerListEntityContract!
     var wireframe: BeerListWireframeContract!
     
-    var beerList = [Beer]()
+    var beerList = [BeerPresentable]()
 
     func viewDidLoad() {
 

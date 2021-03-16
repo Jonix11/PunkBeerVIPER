@@ -18,7 +18,7 @@ protocol BeerListEntityContract: BaseEntity {
 protocol BeerListViewContract: BaseViewController {
     var presenter: BeerListPresenterContract! { get set }
     
-    func updateBeerListData(with beers: [Beer])
+    func updateBeerListData(with beers: [BeerPresentable])
     
 }
 
@@ -38,8 +38,8 @@ protocol BeerListPresenterContract: BasePresenter {
 protocol BeerListInteractorContract: BaseInteractor {
     var output: BeerListInteractorOutputContract! {get set}
     
-    func getInitialBeerList() -> Promise<[Beer]>
-    func getSearchedBeerList(withPairingFood food: String) -> Promise<[Beer]>
+    func getInitialBeerList() -> Promise<[BeerPresentable]>
+    func getSearchedBeerList(withPairingFood food: String) -> Promise<[BeerPresentable]>
 }
 
 protocol BeerListInteractorOutputContract: class {
@@ -50,7 +50,7 @@ protocol BeerListWireframeContract: BaseWireframe {
     var output: BeerListWireframeOutputContract! { get set }
     var view: UIViewController! { get set }
     
-    func showBeerDetailView(withBeer beer: Beer)
+    func showBeerDetailView(withBeer beer: BeerPresentable)
 }
 
 protocol BeerListWireframeOutputContract: class {

@@ -10,53 +10,55 @@ import Alamofire
 import PromiseKit
 
 protocol BeerProviderContract {
-    func getInitialBeers() -> Promise<[Beer]>
-    func getSearchedBeers(withPairingFood food: String) -> Promise<[Beer]>
+    func getInitialBeers() -> Promise<[BeerPresentable]>
+    func getSearchedBeers(withPairingFood food: String) -> Promise<[BeerPresentable]>
+}
+
+enum BeerNetworkError: Error {
+    case initialBeerLoadError
 }
 
 class BeerNetworkProvider: BeerProviderContract {
     
-    func getInitialBeers() -> Promise<[Beer]> {
-        return Promise<[Beer]> { promise in
-            AF.request(PunkAPIConstants.getAbsoluteURL()).responseData { response in
-                switch response.result {
-                case .failure(let error):
-                    promise.reject(error)
-                case .success(let value):
-                    do {
-                        let jsonObject = try JSONSerialization.jsonObject(with: value, options: .mutableContainers)
-                        
-                    } catch {
-                        promise.reject(error)
-                    }
-//                    do {
-//                        let decoder = JSONDecoder()
-//                        let beerList = try decoder.decode([Beer].self, from: value)
-//                        promise.fulfill(beerList)
-//                    } catch {
-//                        promise.reject(error)
-//                    }
-                }
+    func getInitialBeers() -> Promise<[BeerPresentable]> {
+        return Promise<[BeerPresentable]> { promise in
+            
+            self.getInitialData(withURL: PunkAPIConstants.getAbsoluteURL()).done { initialData in
+                let beerList = self.getBeerList(fromData: initialData)
+                promise.fulfill(beerList)
             }
         }
     }
     
-    func getSearchedBeers(withPairingFood food: String) -> Promise<[Beer]> {
-        return Promise<[Beer]> { promise in
-            AF.request(PunkAPIConstants.getBeersURL(withPairingFood: food)).responseData { response in
-                switch response.result {
-                case .failure(let error):
-                    promise.reject(error)
-                case .success(let value):
-                    do {
-                        let decoder = JSONDecoder()
-                        let beerList = try decoder.decode([Beer].self, from: value)
-                        promise.fulfill(beerList)
-                    } catch {
-                        promise.reject(error)
-                    }
-                }
+    func getSearchedBeers(withPairingFood food: String) -> Promise<[BeerPresentable]> {
+        return Promise<[BeerPresentable]> { promise in
+            
+            self.getInitialData(withURL: PunkAPIConstants.getBeersURL(withPairingFood: food)).done { initialData in
+                let beerList = self.getBeerList(fromData: initialData)
+                promise.fulfill(beerList)
             }
         }
+    }
+    
+    private func getInitialData(withURL url: URL) -> Promise<[[String: Any]]> {
+        return Promise<[[String: Any]]> { promise in
+            AF.request(url).responseJSON { response in
+                guard let initialData = try? response.result.get() as? [[String: Any]] else {
+                    promise.reject(BeerNetworkError.initialBeerLoadError)
+                    return
+                }
+                promise.fulfill(initialData)
+            }
+        }
+    }
+    
+    private func getBeerList(fromData data: [[String: Any]]) -> [BeerPresentable] {
+        var beerList = [BeerPresentable]()
+        for item in data {
+            if let beer = try? Beer(JSON: item) {
+                beerList.append(beer)
+            }
+        }
+        return beerList
     }
 }

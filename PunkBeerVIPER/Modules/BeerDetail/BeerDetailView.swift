@@ -49,7 +49,7 @@ class BeerDetailView: BaseViewController, BeerDetailViewContract {
     }
     
     // MARK: - Public methods
-    func reloadBeerData(withBeer beer: Beer) {
+    func reloadBeerData(withBeer beer: BeerPresentable) {
         beerImage.sd_setImage(with: beer.imageURL, placeholderImage: UIImage(named: "BeerBottle"))
         nameLabel.text = beer.name
         
@@ -59,7 +59,7 @@ class BeerDetailView: BaseViewController, BeerDetailViewContract {
             taglineLabel.text = "This beer doesn't have tagline"
         }
         
-        if let firstBrewed = beer.firstBrewed {
+        if let firstBrewed = beer.firstBrewedDate {
             dateLabel.text = DateFormatter.beerAPIDateFormatter.string(from: firstBrewed)
         } else {
             dateLabel.text = "n/a"

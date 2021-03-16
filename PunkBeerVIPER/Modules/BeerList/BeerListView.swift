@@ -51,7 +51,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
     }
     
     // MARK: - Public methods
-    func updateBeerListData(with beers: [Beer]) {
+    func updateBeerListData(with beers: [BeerPresentable]) {
         datasource.beers = beers
         tableView.reloadData()
     }
@@ -59,7 +59,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
 
 class BeerListDataSource: NSObject, UITableViewDataSource {
     
-    var beers = [Beer]()
+    var beers = [BeerPresentable]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return beers.count

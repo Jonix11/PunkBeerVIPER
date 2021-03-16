@@ -11,7 +11,7 @@ import UIKit
 
 class BeerDetailBuilder {
 
-    static func build(withBeer beer: Beer) -> BeerDetailView {
+    static func build(withBeer beer: BeerPresentable) -> BeerDetailView {
         let view = BeerDetailView.init(nibName: String(describing: BeerDetailView.self), bundle: nil)
         let presenter = BeerDetailPresenter()
         let entity = BeerDetailEntity()

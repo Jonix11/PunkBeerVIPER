@@ -21,8 +21,8 @@ class BeerListInteractor: BaseInteractor, BeerListInteractorContract {
     }
     
     // MARK: - Public methods
-    func getInitialBeerList() -> Promise<[Beer]> {
-        return Promise<[Beer]> { promise in
+    func getInitialBeerList() -> Promise<[BeerPresentable]> {
+        return Promise<[BeerPresentable]> { promise in
             firstly {
                 self.networkProvider.getInitialBeers()
             }.done { beerList in
@@ -31,8 +31,8 @@ class BeerListInteractor: BaseInteractor, BeerListInteractorContract {
         }
     }
     
-    func getSearchedBeerList(withPairingFood food: String) -> Promise<[Beer]> {
-        return Promise<[Beer]> { promise in
+    func getSearchedBeerList(withPairingFood food: String) -> Promise<[BeerPresentable]> {
+        return Promise<[BeerPresentable]> { promise in
             firstly {
                 self.networkProvider.getSearchedBeers(withPairingFood: food)
             }.done { beerList in

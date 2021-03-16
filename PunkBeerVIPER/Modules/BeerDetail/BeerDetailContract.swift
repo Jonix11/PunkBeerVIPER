@@ -17,7 +17,7 @@ protocol BeerDetailEntityContract: BaseEntity {
 protocol BeerDetailViewContract: BaseViewController {
     var presenter: BeerDetailPresenterContract! { get set }
     
-    func reloadBeerData(withBeer beer: Beer)
+    func reloadBeerData(withBeer beer: BeerPresentable)
     
 }
 
@@ -34,7 +34,7 @@ protocol BeerDetailPresenterContract: BasePresenter {
 protocol BeerDetailInteractorContract: BaseInteractor {
     var output: BeerDetailInteractorOutputContract! {get set}
     
-    func getBeerData() -> Beer
+    func getBeerData() -> BeerPresentable
 }
 
 protocol BeerDetailInteractorOutputContract: class {

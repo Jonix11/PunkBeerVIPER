@@ -13,7 +13,7 @@ class BeerListTableViewCell: UITableViewCell {
     // MARK: - Properties
     static let reusableId = "BeerListTableViewCell"
     
-    var beer: Beer! {
+    var beer: BeerPresentable! {
         didSet {
             beerImage.sd_setImage(with: beer.imageURL, placeholderImage: UIImage(named: "BeerBottle"))
             nameLabel.text = beer.name
@@ -22,7 +22,7 @@ class BeerListTableViewCell: UITableViewCell {
             } else {
                 taglineLabel.isHidden = true
             }
-            if let firstBrewed = beer.firstBrewed {
+            if let firstBrewed = beer.firstBrewedDate {
                 let firstBrewedString = DateFormatter.beerAPIDateFormatter.string(from: firstBrewed)
                 dateLabel.text = firstBrewedString
             } else {
