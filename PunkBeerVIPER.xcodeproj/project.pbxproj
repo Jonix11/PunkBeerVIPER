@@ -16,7 +16,6 @@
 		AC0F5B7325FE20E600EB18E2 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B7225FE20E600EB18E2 /* BasePresenter.swift */; };
 		AC0F5B7625FE20EF00EB18E2 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B7525FE20EF00EB18E2 /* BaseEntity.swift */; };
 		AC0F5B7925FE211400EB18E2 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */; };
-		AC0F5B8225FE225700EB18E2 /* Beer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8125FE225700EB18E2 /* Beer2.swift */; };
 		AC0F5B8625FE22D300EB18E2 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */; };
 		AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */; };
 		AC0F5B9425FE25B100EB18E2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */; };
@@ -57,7 +56,6 @@
 		AC0F5B7225FE20E600EB18E2 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		AC0F5B7525FE20EF00EB18E2 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		AC0F5B7825FE211400EB18E2 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
-		AC0F5B8125FE225700EB18E2 /* Beer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer2.swift; sourceTree = "<group>"; };
 		AC0F5B8525FE22D300EB18E2 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		AC0F5B8F25FE24C800EB18E2 /* BeerNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerNetworkProvider.swift; sourceTree = "<group>"; };
 		AC0F5B9325FE25B100EB18E2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		AC0F5B8025FE224200EB18E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC0F5B8125FE225700EB18E2 /* Beer2.swift */,
 				AC0F5BEB25FEB34A00EB18E2 /* Beer.swift */,
 			);
 			path = Models;
@@ -402,7 +399,6 @@
 				AC0F5B9025FE24C800EB18E2 /* BeerNetworkProvider.swift in Sources */,
 				AC0F5B9F25FE27AA00EB18E2 /* BeerListContract.swift in Sources */,
 				AC0F5BCF25FE597700EB18E2 /* BeerDetailContract.swift in Sources */,
-				AC0F5B8225FE225700EB18E2 /* Beer2.swift in Sources */,
 				AC0F5BBC25FE428800EB18E2 /* BaseViewController.swift in Sources */,
 				AC0F5BD325FE597700EB18E2 /* BeerDetailView.swift in Sources */,
 				AC0F5BA325FE27AA00EB18E2 /* BeerListView.swift in Sources */,
