@@ -8,7 +8,6 @@ target 'PunkBeerVIPER' do
   # Pods for PunkBeerVIPER
   pod 'Alamofire'
   pod 'SDWebImage'
-  pod 'SnapKit'
   pod 'PromiseKit'
   pod 'ObjectMapper'
 
