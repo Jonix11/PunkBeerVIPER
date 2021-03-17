@@ -1,0 +1,18 @@
+//
+//  Development.xcconfig
+//  PunkBeerVIPER
+//
+//  Created by Jon Gonzalez on 17/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-PunkBeerVIPER/Pods-PunkBeerVIPER.release (development).xcconfig"
+
+APP_ENVIRONMENT = Development
+
+// App Settings
+APP_NAME = PunkBeerVIPER (Dev)
+APP_BUNDLE_ID = com.jongonzalez.PunkBeerVIPER.dev

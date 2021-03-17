@@ -19,7 +19,15 @@ struct Beer: ImmutableMappable {
     let abv: Double?
     let foodPairing: [String]?
     
-    init(beerId: Int, name: String, tagline: String? = nil, firstBrewed: String? = nil, description: String? = nil, image: String? = nil, abv: Double? = nil, foodPairing: [String]? = nil) {
+    init(beerId: Int,
+         name: String,
+         tagline: String? = nil,
+         firstBrewed: String? = nil,
+         description: String? = nil,
+         image: String? = nil,
+         abv: Double? = nil,
+         foodPairing: [String]? = nil) {
+        
         self.beerId = beerId
         self.name = name
         self.tagline = tagline
