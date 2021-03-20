@@ -23,6 +23,7 @@ class BeerListView: BaseViewController, BeerListViewContract {
     // swiftlint:disable:next weak_delegate
     var searchDelegate: BeerSearchBarDelegate!
     
+    
 	// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +87,21 @@ class BeerListDelegate: NSObject, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.beerSelected(in: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == tableView.numberOfSections - 1 &&
+            indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            print("ES EL FINAAAAL!!!")
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y, scrollView.contentSize.height, scrollView.frame.size.height)
+//        let isReachingEnd = scrollView.contentOffset.y >= 0
+//              && scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)
+        let isReachingEnd = scrollView.contentOffset.y >= (scrollView.contentSize.height - (scrollView.frame.size.height + 200))
+        print(isReachingEnd)
     }
 }
 
