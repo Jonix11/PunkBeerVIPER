@@ -39,6 +39,7 @@
 		AC0F5BD525FE597700EB18E2 /* BeerDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5BCD25FE597700EB18E2 /* BeerDetailEntity.swift */; };
 		AC0F5BD625FE597700EB18E2 /* BeerDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5BCE25FE597700EB18E2 /* BeerDetailWireframe.swift */; };
 		AC0F5BEC25FEB34B00EB18E2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F5BEB25FEB34A00EB18E2 /* Beer.swift */; };
+		AC398172260681BF00E4CC44 /* Prueba.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC398171260681BF00E4CC44 /* Prueba.plist */; };
 		AC4647D02602A5C70076B5B7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4647CF2602A5C70076B5B7 /* Environment.swift */; };
 		BD1F401D6D4E852284D8DC62 /* Pods_PunkBeerVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C2DEEC46F5D6301CE69ECD /* Pods_PunkBeerVIPER.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		AC0F5BCD25FE597700EB18E2 /* BeerDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailEntity.swift; sourceTree = "<group>"; };
 		AC0F5BCE25FE597700EB18E2 /* BeerDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailWireframe.swift; sourceTree = "<group>"; };
 		AC0F5BEB25FEB34A00EB18E2 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		AC398171260681BF00E4CC44 /* Prueba.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Prueba.plist; sourceTree = "<group>"; };
 		AC4647CF2602A5C70076B5B7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		AC97650A260293F400380808 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		AC97650B2602943300380808 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				AC0F5B4D25FE1DE900EB18E2 /* Info.plist */,
 				AC4647CF2602A5C70076B5B7 /* Environment.swift */,
 				AC97650B2602943300380808 /* Production.xcconfig */,
+				AC398171260681BF00E4CC44 /* Prueba.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				AC0F5BA425FE27AA00EB18E2 /* BeerListView.xib in Resources */,
 				AC0F5B4925FE1DE900EB18E2 /* Assets.xcassets in Resources */,
 				AC0F5BAD25FE294300EB18E2 /* BeerListTableViewCell.xib in Resources */,
+				AC398172260681BF00E4CC44 /* Prueba.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
